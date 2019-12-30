@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Knowing where you are: custom array indices in Julia</title>
+<meta name="author" content="Jeff Bezanson, Stefan Karpinski, Viral Shah, Alan Edelman, et al." />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Official website for the Julia programming language. Join the Julia community today.">
+
+<meta property="og:title" content="The Julia Language"/>
+<meta property="og:image" content="http://www.julialang.org/images/julia-open-graph.png"/>
+<meta property="og:description" content="Official website for the Julia programming language"/>
+
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i" rel="stylesheet">
+<link rel="stylesheet" href="/v2/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/v2/css/app.css" />
+<link rel="stylesheet" href="/v2/css/fonts.css" />
+<link rel="stylesheet" href="/v2/css/highlight/github.css" />
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+    onload="renderMathInElement(document.body, {
+        delimiters: [
+          {left: '$[[', right: ']]', display: true},
+          {left: '\\[', right: '\\]', display: true},
+          {left: '[[', right: ']]', display: false}
+        ]
+      });"></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-28835595-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-28835595-1');
+</script>
+
+  
+
+  
+</head>
+
+<body>
+  
+  
+
+<div class="container py-3 py-lg-0">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" id="main-menu">
+
+    <a class="navbar-brand" href="/" id="logo">
+      <img src="/v2/img/logo.svg" height="55" width="85" alt="JuliaLang Logo"/>
+    </a>
+
+    <button class="navbar-toggler ml-auto hidden-sm-up float-xs-left" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        
+        <li class="nav-item  flex-md-fill text-md-center">
+          <a class="nav-link" href="/downloads">Download</a>
+        </li>
+        <li class="nav-item flex-md-fill text-md-center">
+          <a class="nav-link" href="//docs.julialang.org">Documentation</a>
+        </li>
+        <li class="nav-item  flex-md-fill text-md-center">
+          <a class="nav-link" href="/blog/">Blog</a>
+        </li>
+        <li class="nav-item  flex-md-fill text-md-center">
+          <a class="nav-link" href="/community">Community</a>
+        </li>
+        <li class="nav-item  flex-md-fill text-md-center">
+          <a class="nav-link" href="/learning">Learning</a>
+        </li>
+        <li class="nav-item  flex-md-fill text-md-center">
+          <a class="nav-link" href="/research">Research</a>
+        </li>
+        <li class="nav-item  flex-md-fill text-md-center">
+          <a class="nav-link" href="/soc/ideas-page">JSoC</a>
+        </li>
+        <li class="nav-item donate flex-md-fill text-md-center">
+          <a class="btn btn-success" href="https://numfocus.org/donate-to-julia">Donate</a>
+        </li>
+      </ul>
+    </div>
+
+  </nav>
+</div>
+
+
+
+  <br /><br />
+
+  <div class="container">
+
+  <div id="blogpost">
+    <h1>Knowing where you are: custom array indices in Julia</h1>
+
+    <p class="metadata">
+      <span class="timestamp">18 April, 2017</span>
+      
+      &nbsp;|&nbsp;
+      <span class="author">&lt;a href=&#34;http://holylab.wustl.edu&#34;&gt;Tim Holy&lt;/a&gt;</span>
+      
+    </p>
+
+    <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>Arrays are a crucial component of any programming language,
+particularly for a data-oriented language like Julia.  Arrays store
+values according to their location: in Julia, given a two-dimensional
+array <code>A</code>, the expression <code>A[1,3]</code> returns the value stored at a
+location known as <code>(1,3)</code>.  If, for example, <code>A</code> stores <code>Float64</code>
+numbers, the value returned by this expression will be a single
+<code>Float64</code> number.</p>
+<p>Julia's arrays conventionally start numbering their axes with 1,
+meaning that the first element of a one-dimensional array <code>a</code> is
+<code>a[1]</code>. The choice of 1 vs. 0 seems to generate a certain amount of
+discussion. A fairly recent addition to the Julia landscape is the
+ability to define arrays that start with an <em>arbitrary</em> index.  The
+purpose of this blog post is to describe why this might be
+interesting.  This is really a &ldquo;user-oriented&rdquo; blog post, hinting at
+some of the ways this new feature can make your life simpler.  For
+developers who want to write code that supports arrays with arbitrary
+indices, see
+<a href="https://docs.julialang.org/en/v1/devdocs/offset-arrays">this documentation page</a>.</p>
+<h2 id="why-should-we-care-which-indices-an-array-has-a-first-example">Why should we care which indices an array has? A first example</h2>
+<p>Sometimes arrays are used as simple lists, in which case the indices
+may not matter to you. But in other cases, arrays are used as a
+discrete representation of a continuous quantity (e.g., values defined
+over space or time), and in such cases the array indices correspond to
+&ldquo;location&rdquo; in a way that may be meaningful.</p>
+<p>As a simple example, consider the process of rotating an image:</p>
+<table>
+<thead>
+<tr>
+<th align="center">img</th>
+<th align="center">img_rotated</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img src="/images/blog/2017-04-18-offset-arrays/cameraman.png" alt="cameraman"></td>
+<td align="center"><img src="/images/blog/2017-04-18-offset-arrays/cameraman_rotated.png" alt="cameraman_rot"></td>
+</tr>
+</tbody>
+</table>
+<p>Many languages provide functions for rotating an image; in Julia, you
+can do this with the <code>warp</code> function defined in
+<a href="https://github.com/JuliaImages/ImageTransformations.jl">ImageTransformations</a>.</p>
+<p>Things get a little more &ldquo;interesting&rdquo; when you want to compare pixels
+in the rotated image to those of the original image. How, exactly, do
+these pixels match up? In other words, for a location <code>img[i,j]</code>, what
+is the corresponding <code>i′,j′</code> location in <code>img_rotated</code>? In many languages,
+figuring out these types of geometric alignments may not be a simple
+task; it's no exaggeration to say that in complex situations (e.g., a
+three-dimensional image with a complex spatial deformation) that one
+can spend a day or more figuring out exactly how pixels/voxels in two
+images are supposed to be compared.</p>
+<p>Why is this such a hard problem? The core problem is that, in most
+cases, the language is essentially &ldquo;lying&rdquo; to you about the location of
+pixels: if arrays always start indexing at 1 along any given axis, the
+array indices don't really correspond to an absolute spatial location.
+An index of 1 means &ldquo;first index&rdquo; rather than &ldquo;spatial location 1.&rdquo;</p>
+<p>So to fix this in Julia, starting with version 0.5 we support arrays
+with indices that don't start with 1. Let's illustrate this by
+specifying that we want the above rotation to be around a point in the
+head of the cameraman. Let's load the image:</p>
+<pre><code class="language-julia">julia&gt; using Images, TestImages
+
+julia&gt; img = testimage(&quot;cameraman&quot;);
+
+julia&gt; summary(img)
+&quot;512×512 Array{Gray{N0f8},2}&quot;
+</code></pre>
+<p><code>summary</code> shows that <code>img</code> is a grayscale image indexed over the
+ranges <code>1:512×1:512</code>. Using any of several approaches (e.g.,
+<a href="https://github.com/timholy/ImageView.jl">ImageView</a> and paying
+attention to the status bar to get the mouse pointer location), we can
+learn that the point <code>(y=126, x=251)</code> is in the head of the
+cameraman. Consequently, let's define a rotation around this point:</p>
+<pre><code class="language-julia">julia&gt; using Rotations, CoordinateTransformations
+
+julia&gt; tfm = Translation(125,250) ∘ LinearMap(RotMatrix(pi/6)) ∘ Translation(-125,-250)
+AffineMap([0.866025 -0.5; 0.5 0.866025], [141.747, -29.0064])
+</code></pre>
+<p>This defines <code>tfm</code> as the composition of a translation (shifting the
+head to the origin) followed by a rotation, and then translating back.
+(You can get the
+composition operator by typing <code>\circ</code> and then hitting TAB.) If we
+apply this transformation to the image, we get an interesting result:</p>
+<pre><code class="language-julia">julia&gt; img_rotated = warp(img, tfm);
+
+julia&gt; summary(img_rotated)
+&quot;-107:592×-160:539 OffsetArray{Gray{N0f8},2}&quot;
+</code></pre>
+<p>Perhaps surprisingly, <code>img_rotated</code> is indexed over the range
+<code>-107:592×-160:539</code>, meaning that we access the upper left corner by
+<code>img_rotated[-107,-160]</code> and the lower right corner by
+<code>img_rotated[592,539]</code>. It's not hard to see why these numbers arise,
+if we see how the corners of <code>img</code> are transformed by <code>tfm</code>:</p>
+<pre><code class="language-julia">julia&gt; using StaticArrays
+
+julia&gt; itfm = inv(tfm)
+AffineMap([0.866025 0.5; -0.5 0.866025], [-108.253, 95.9936])
+
+julia&gt; itfm(SVector(1,1))
+2-element SVector{2,Float64}:
+ -106.887
+   96.3597
+
+julia&gt; itfm(SVector(512,1))
+2-element SVector{2,Float64}:
+  335.652
+ -159.14
+
+julia&gt; itfm(SVector(1,512))
+2-element SVector{2,Float64}:
+ 148.613
+ 538.899
+
+julia&gt; itfm(SVector(512,512))
+2-element SVector{2,Float64}:
+ 591.152
+ 283.399
+</code></pre>
+<p>This makes it apparent that the output's indices span the region of
+the transformed coordinates.</p>
+<p>The fact that the output preserves the coordinates makes it trivial to
+compare the images:</p>
+<pre><code class="language-julia">julia&gt; cv = colorview(RGB, paddedviews(0, img, img_rotated, img)...)
+</code></pre>
+<p><code>paddedviews(0, arrays...)</code> pads input arrays with 0, as needed, to
+give them all the same indices, and <code>colorview(RGB, r, g, b)</code> inserts
+the grayscale images <code>r</code>, <code>g</code>, and <code>b</code> into the red, green, and blue
+channels respectively.  If we visualize <code>cv</code>, we see the following:</p>
+<table>
+<thead>
+<tr>
+<th align="center">around image center</th>
+<th align="center">around head (cv)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img src="/images/blog/2017-04-18-offset-arrays/cameraman_overlay_center.png" alt="cameraman"></td>
+<td align="center"><img src="/images/blog/2017-04-18-offset-arrays/cameraman_overlay.png" alt="cameraman_rot"></td>
+</tr>
+</tbody>
+</table>
+<p>The image on the left is for reference, showing what a rotation around
+the image center would look like when properly aligned. The image on
+the right corresponds to the steps taken above, and indeed confirms
+that the rotation is around the head. Alternatively, we can focus on
+the overlapping portions of these images like this:</p>
+<pre><code class="language-julia">julia&gt; inds = map(intersect, indices(img), indices(img_rotated))
+(1:512, 1:512)
+
+julia&gt; imgi = img[inds...];
+
+julia&gt; imgri = img_rotated[inds...];
+</code></pre>
+<p>so that <code>colorview(RGB, imgi, imgri, imgi)</code> displays as</p>
+<p><img src="/images/blog/2017-04-18-offset-arrays/cameraman_overlay_interior.png" alt="cameraman_interior"></p>
+<p>Since the indices of the pixels encode absolute spatial location, it's
+trivial to keep track of how different pixels align: pixel <code>i,j</code> in
+one image corresponds to pixel <code>i,j</code> in the other.  This is true even
+if our coordinate transformation were far more complicated than a
+simple rotation.</p>
+<p>Having motivated why this might be useful, let's take a step back and
+walk through array indices a bit more systematically.</p>
+<h2 id="a-systematic-introduction-to-arrays-with-arbitrary-indices">A systematic introduction to arrays with arbitrary indices</h2>
+<p>In Julia, if we define an array</p>
+<pre><code class="language-julia">julia&gt; A = collect(reshape(1:30, 5, 6))
+5×6 Array{Int64,2}:
+ 1   6  11  16  21  26
+ 2   7  12  17  22  27
+ 3   8  13  18  23  28
+ 4   9  14  19  24  29
+ 5  10  15  20  25  30
+</code></pre>
+<p>then we can refer to a rectangular region like this:</p>
+<pre><code class="language-julia">julia&gt; B = A[1:3, 1:4]
+3×4 Array{Int64,2}:
+ 1  6  11  16
+ 2  7  12  17
+ 3  8  13  18
+</code></pre>
+<p>For certain applications, one negative to extracting blocks is that
+there is no record indicating where the new block originated from:</p>
+<pre><code class="language-julia">julia&gt; B2 = A[2:4, 1:4]
+3×4 Array{Int64,2}:
+ 2  7  12  17
+ 3  8  13  18
+ 4  9  14  19
+
+julia&gt; B2[1,1]
+2
+</code></pre>
+<p>So <code>B2[1,1]</code> corresponds to <code>A[2,1]</code>, despite the fact that, as
+measured by their indices, these are not the same location.</p>
+<p>To maintain consistent &ldquo;naming&rdquo; of our indices, let's use the
+<a href="https://github.com/alsam/OffsetArrays.jl">OffsetArrays</a> package:</p>
+<pre><code class="language-julia">julia&gt; using OffsetArrays
+
+julia&gt; B3 = OffsetArray(A[2:4, 1:4], 2:4, 1:4)  # wrap the snipped-out piece in an OffsetArray
+OffsetArrays.OffsetArray{Int64,2,Array{Int64,2}} with indices 2:4×1:4:
+ 2  7  12  17
+ 3  8  13  18
+ 4  9  14  19
+
+julia&gt; B3[3,4]
+18
+
+julia&gt; A[3,4]
+18
+</code></pre>
+<p>So the indices in <code>B3</code> match those of <code>A</code>. Indeed, <code>B3</code> doesn't even
+have an element &ldquo;named&rdquo; <code>(1,1)</code>:</p>
+<pre><code class="language-julia">julia&gt; B3[1,1]
+ERROR: BoundsError: attempt to access OffsetArrays.OffsetArray{Int64,2,Array{Int64,2}} with indices 2:4×1:4 at index [1, 1]
+Stacktrace:
+ [1] throw_boundserror(::OffsetArrays.OffsetArray{Int64,2,Array{Int64,2}}, ::Tuple{Int64,Int64}) at ./abstractarray.jl:426
+ [2] checkbounds at ./abstractarray.jl:355 [inlined]
+ [3] getindex(::OffsetArrays.OffsetArray{Int64,2,Array{Int64,2}}, ::Int64, ::Int64) at /home/tim/.julia/v0.6/OffsetArrays/src/OffsetArrays.jl:89
+</code></pre>
+<p>In this case we created <code>B3</code> by explicitly &ldquo;wrapping&rdquo; the extracted
+array inside a type that allows you to supply custom indices.  (You
+can retrieve just the extracted portion with <code>parent(B3)</code>.)  We could
+do the same thing by adjusting the <em>indices</em> instead:</p>
+<pre><code class="language-julia">julia&gt; using IdentityRanges
+
+julia&gt; ind1, ind2 = IdentityRange(2:4), IdentityRange(1:4)
+(IdentityRange(2:4), IdentityRange(1:4))
+</code></pre>
+<p>An <a href="https://github.com/JuliaArrays/IdentityRanges.jl"><code>IdentityRange</code></a> is a range with indices that match its values, <code>r[i] == i</code>. (<code>ind1, ind2 = OffsetArray(2:4, 2:4), OffsetArray(1:4, 1:4)</code> would be functionally equivalent.) Let's use <code>ind1</code> and <code>ind2</code> to snip out the region of the array:</p>
+<pre><code class="language-julia">julia&gt; B4 = A[ind1, ind2]
+OffsetArrays.OffsetArray{Int64,2,Array{Int64,2}} with indices 2:4×1:4:
+ 2  7  12  17
+ 3  8  13  18
+ 4  9  14  19
+
+julia&gt; B4[3,4]
+18
+</code></pre>
+<p>This implements a simple rule of composition:</p>
+<p><strong>If <code>C = A[ind1, ind2]</code>, then <code>C[i, j] == A[ind1[i], ind2[j]]</code></strong></p>
+<p>Consequently, if your indices have their own unconventional indices,
+they will be propagated forward to the next stage.</p>
+<p>This technique can also be used to create a &ldquo;view&rdquo;:</p>
+<pre><code class="language-julia">julia&gt; V = view(A, ind1, ind2)
+SubArray{Int64,2,Array{Int64,2},Tuple{IdentityRanges.IdentityRange{Int64},IdentityRanges.IdentityRange{Int64}},false} with indices 2:4×1:4:
+ 2  7  12  17
+ 3  8  13  18
+ 4  9  14  19
+
+julia&gt; V[3,4]
+18
+
+julia&gt; V[1,1]
+ERROR: BoundsError: attempt to access SubArray{Int64,2,Array{Int64,2},Tuple{IdentityRanges.IdentityRange{Int64},IdentityRanges.IdentityRange{Int64}},false} with indices 2:4×1:4 at index [1, 1]
+Stacktrace:
+ [1] throw_boundserror(::SubArray{Int64,2,Array{Int64,2},Tuple{IdentityRanges.IdentityRange{Int64},IdentityRanges.IdentityRange{Int64}},false}, ::Tuple{Int64,Int64}) at ./abstractarray.jl:426
+ [2] checkbounds at ./abstractarray.jl:355 [inlined]
+ [3] getindex(::SubArray{Int64,2,Array{Int64,2},Tuple{IdentityRanges.IdentityRange{Int64},IdentityRanges.IdentityRange{Int64}},false}, ::Int64, ::Int64) at ./subarray.jl:184
+</code></pre>
+<p>Note that this object is a <em>conventional</em> <code>SubArray</code> (it's not an
+<code>OffsetArray</code>), but because it was passed <code>IdentityRange</code> indices it
+preserves the indices of the indices.</p>
+<h2 id="a-second-application-arrayimage-filtering-convolution">A second application: array/image filtering (convolution)</h2>
+<p>As illustrated above for the image rotation example, a recent release
+(v0.6.0) of the Images package put both the power and responsibility
+for dealing with arrays with custom indices into the hands of users.
+One of the key functions in this package is <code>imfilter</code> which can be
+used to smooth or otherwise &ldquo;filter&rdquo; arrays. The idea is that starting
+from an array <code>A</code>, each local neighborhood is weighted by a &ldquo;kernel&rdquo;
+<code>kern</code>, producing an output value according to the following formula:</p>
+<p>$$ F[I] = \sum_J A[I+J] kern[J] $$</p>
+<p>This is the formula for
+<a href="https://en.wikipedia.org/wiki/Cross-correlation">correlation</a>; the
+formula for another operation,
+<a href="https://en.wikipedia.org/wiki/Convolution">convolution</a>, is very
+similar.</p>
+<p>Let's start with a trivial example: let's filter with a &ldquo;delta
+function&rdquo; kernel, meaning it has value <code>1</code> at location 0 and is zero
+everywhere else. According to the correlation formula, because <code>kern[J]</code>
+is 1 at <code>J==0</code>, this should simply give us a copy of our original array:</p>
+<pre><code class="language-julia">julia&gt; using Images
+
+julia&gt; imfilter(1:8, [1])
+WARNING: assuming that the origin is at the center of the kernel; to avoid this warning, call `centered(kernel)` or use an OffsetArray
+Stacktrace:
+ [1] depwarn(::String, ::Symbol) at ./deprecated.jl:64
+ [2] _kernelshift at /home/tim/.julia/v0.6/ImageFiltering/src/imfilter.jl:1049 [inlined]
+ [3] kernelshift at /home/tim/.julia/v0.6/ImageFiltering/src/imfilter.jl:1046 [inlined]
+ [4] factorkernel(::Array{Int64,1}) at /home/tim/.julia/v0.6/ImageFiltering/src/imfilter.jl:1016
+ [5] imfilter at /home/tim/.julia/v0.6/ImageFiltering/src/imfilter.jl:10 [inlined]
+ [6] imfilter(::UnitRange{Int64}, ::Array{Int64,1}) at /home/tim/.julia/v0.6/ImageFiltering/src/imfilter.jl:5
+ [7] eval(::Module, ::Any) at ./boot.jl:235
+ [8] eval_user_input(::Any, ::Base.REPL.REPLBackend) at ./REPL.jl:66
+ [9] macro expansion at ./REPL.jl:97 [inlined]
+ [10] (::Base.REPL.##1#2{Base.REPL.REPLBackend})() at ./event.jl:73
+while loading no file, in expression starting on line 0
+8-element Array{Int64,1}:
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+</code></pre>
+<p>The warning is telling you that Images decided to make a guess about
+your intention, that the kernel <code>[1]</code> was intended to be centered around zero. You can
+suppress the warning by explicitly passing the following kernel
+instead:</p>
+<pre><code class="language-julia">julia&gt; kern = centered([1])
+OffsetArrays.OffsetArray{Int64,1,Array{Int64,1}} with indices 0:0:
+ 1
+
+julia&gt; kern[0]
+1
+
+julia&gt; kern[1]
+ERROR: BoundsError: attempt to access OffsetArrays.OffsetArray{Int64,1,Array{Int64,1}} with indices 0:0 at index [1]
+Stacktrace:
+ [1] throw_boundserror(::OffsetArrays.OffsetArray{Int64,1,Array{Int64,1}}, ::Tuple{Int64}) at ./abstractarray.jl:426
+ [2] checkbounds at ./abstractarray.jl:355 [inlined]
+ [3] getindex(::OffsetArrays.OffsetArray{Int64,1,Array{Int64,1}}, ::Int64) at /home/tim/.julia/v0.6/OffsetArrays/src/OffsetArrays.jl:94
+</code></pre>
+<p>By using an <code>OffsetArray</code> you have clearly specified your intended indices for <code>kern</code>.</p>
+<p>This can be used to shift an image in the following way (by default, <code>imfilter</code> returns its results over the same domain as the input):</p>
+<pre><code class="language-julia">julia&gt; kern2 = OffsetArray([1], 2:2)  # a delta function centered at 2
+OffsetArrays.OffsetArray{Int64,1,Array{Int64,1}} with indices 2:2:
+ 1
+
+julia&gt; imfilter(1:8, kern2, Fill(0))  # pad the edges of the input with 0
+8-element Array{Int64,1}:
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 0
+ 0
+
+julia&gt; kern3 = OffsetArray([1], -5:-5)   # a delta function centered at -5
+OffsetArrays.OffsetArray{Int64,1,Array{Int64,1}} with indices -5:-5:
+ 1
+
+julia&gt; imfilter(1:8, kern3, Fill(0))
+8-element Array{Int64,1}:
+ 0
+ 0
+ 0
+ 0
+ 0
+ 1
+ 2
+ 3
+</code></pre>
+<p>These are all illustrated in the following figure:</p>
+<p><img src="/images/blog/2017-04-18-offset-arrays/filtering.png" alt="deltafunctions"></p>
+<p>In this figure, we plotted the kernel as if it were at the location
+corresponding to convolution rather than correlation.</p>
+<p>In other programming languages, when filtering with a kernel that has
+an even number of elements, it can be difficult to remember which of
+the two middle elements corresponds to the origin.  In Julia, that's
+not an issue, because you can make that choice for yourself:</p>
+<pre><code class="language-julia">julia&gt; kern = OffsetArray([0.5,0.5], 0:1)
+OffsetArrays.OffsetArray{Float64,1,Array{Float64,1}} with indices 0:1:
+ 0.5
+ 0.5
+
+julia&gt; imfilter(1:8, kern, Fill(0))
+8-element Array{Float64,1}:
+ 1.5
+ 2.5
+ 3.5
+ 4.5
+ 5.5
+ 6.5
+ 7.5
+ 4.0
+
+julia&gt; kern = OffsetArray([0.5,0.5], -1:0)
+OffsetArrays.OffsetArray{Float64,1,Array{Float64,1}} with indices -1:0:
+ 0.5
+ 0.5
+
+julia&gt; imfilter(1:8, kern, Fill(0))
+8-element Array{Float64,1}:
+ 0.5
+ 1.5
+ 2.5
+ 3.5
+ 4.5
+ 5.5
+ 6.5
+ 7.5
+</code></pre>
+<p>Likewise, sometimes we might have an application where we simply can't
+handle the edges properly, and we wish to discard them.  For example,
+consider the following quadratic function:</p>
+<pre><code class="language-julia">julia&gt; a = [(i-3)^2 for i = 1:9]  # a quadratic function
+9-element Array{Int64,1}:
+  4
+  1
+  0
+  1
+  4
+  9
+ 16
+ 25
+ 36
+
+julia&gt; imfilter(a, Kernel.Laplacian((true,)))
+9-element Array{Int64,1}:
+  -3
+   2
+   2
+   2
+   2
+   2
+   2
+   2
+ -11
+</code></pre>
+<p>Those weird values on the edges (for which there is no padding that
+will &ldquo;extrapolate&rdquo; the quadratic) might cause problems. Consequently,
+let's only extract the values that are well-defined, meaning that all
+inputs to the correlation formula have explicitly-assigned values:</p>
+<pre><code class="language-julia">julia&gt; imfilter(a, Kernel.Laplacian((true,)), Inner())
+OffsetArrays.OffsetArray{Int64,1,Array{Int64,1}} with indices 2:8:
+ 2
+ 2
+ 2
+ 2
+ 2
+ 2
+ 2
+</code></pre>
+<p>Notice that in this case, it returned an <code>OffsetArray</code> so that the
+values in the result align properly with the original array.</p>
+<h2 id="a-final-application-fourier-transforms">A final application: Fourier transforms</h2>
+<p>There are many more things you can do with custom indices.  As one
+last illustration, consider the
+<a href="https://en.wikipedia.org/wiki/Discrete_Fourier_transform">Discrete Fourier Transform</a>,
+which is defined on a periodic domain.  Typically, it's rather
+difficult to emulate a periodic domain with arrays, because arrays
+have finite size.  However, it's possible to define indexing objects
+which possess periodic behavior.  Here we use the
+<a href="https://github.com/JuliaArrays/FFTViews.jl">FFTViews</a> package,
+demonstrating the technique on a simple sinusoid:</p>
+<pre><code class="language-julia">julia&gt; using FFTViews
+
+julia&gt; a = [sin(2π*x)+0.1 for x in linspace(0,1,16)];
+
+julia&gt; afft = FFTView(fft(a))
+FFTViews.FFTView{Complex{Float64},1,Array{Complex{Float64},1}} with indices FFTViews.URange(0,15):
+       1.6+0.0im
+     1.498-7.53098im
+ -0.288537+0.69659im
+ -0.236488+0.35393im
+ -0.222614+0.222614im
+ -0.216932+0.14495im
+ -0.214217+0.0887316im
+ -0.212937+0.0423558im
+ -0.212557+0.0im
+ -0.212937-0.0423558im
+ -0.214217-0.0887316im
+ -0.216932-0.14495im
+ -0.222614-0.222614im
+ -0.236488-0.35393im
+ -0.288537-0.69659im
+     1.498+7.53098im
+</code></pre>
+<p>Now, as every student of Fourier transforms learns, the 0-frequency bin holds the sum of the values in <code>a</code>:</p>
+<pre><code class="language-julia">julia&gt; afft[0]
+1.6000000000000003 + 0.0im
+</code></pre>
+<p>Since the mean of a sinusoid is zero, this is (within roundoff error) 16*0.1 = 1.6.</p>
+<p>We can also check the amplitude at the Fourier-peak, and explore the
+periodicity of the result:</p>
+<pre><code class="language-julia">julia&gt; afft[1]
+1.4980046017247872 - 7.53097769363728im
+
+julia&gt; afft[-1]      # negative frequencies are OK
+1.4980046017247872 + 7.53097769363728im
+
+julia&gt; afft[64+1]    # look Ma, it's periodic!
+1.4980046017247872 - 7.53097769363728im
+
+julia&gt; length(indices(afft,1))   # but we still know how big it is
+16
+</code></pre>
+<p>Given the periodicity of <code>afft</code>, the commonly-used <code>fftshift</code> function
+(e.g., <code>fftshift(fft(a))</code>) can be replaced by <code>afft[-8:7]</code>. While very simple,
+these techniques make it surprisingly more pleasant to deal with what
+can sometimes become complex and error-prone index gymnastics.</p>
+<h2 id="summary-a-users-perspective">Summary: a user's perspective</h2>
+<p>This has only scratched the surface of what's possible with custom
+indices.  In the opinion of the author, their main advantage is that
+they can increase the clarity of code by ensuring that &ldquo;names&rdquo;
+(indices) can be endowed with <em>absolute meaning</em>, rather than always
+being &ldquo;referenced to whatever the first element of this particular
+array happens to encode.&rdquo;</p>
+<p>There is quite a lot of code that hasn't yet properly accounted for
+the possibility of custom indices&mdash;surely, some of it written by the
+author of this post! So users should be prepared for the possibility
+that exploiting custom indices will trigger errors in base Julia or in
+packages.  Rather than giving up, users are encouraged to report such
+errors as issues, as this is the only way that custom indices will,
+over the course of time, have solid support.</p>
+<h2 id="summary-a-developers-perspective">Summary: a developer's perspective</h2>
+<p>For some algorithms, there appears to be little reason to ever use
+arrays with anything but 1-based indices; in such cases, there may be
+no reason to modify existing code.  But if your code has a &ldquo;spatial&rdquo;
+interpretation&ndash;where location has meaning&ndash;then you just might want
+to give the new facilities a try.</p>
+<p>In transitioning existing code, the author of this post has observed
+the following tendencies:</p>
+<ul>
+<li>
+<p>algorithms that exploit custom indices are sometimes simpler to
+understand than their &ldquo;1-locked&rdquo; counterparts;</p>
+</li>
+<li>
+<p>if you're porting old code to support custom indices, there's some
+bad news: if you had to think carefully about the indexing the first
+time you wrote it, it usually requires significant investment to
+re-think the indexing, even if the end result is somewhat simpler.</p>
+</li>
+<li>
+<p>even when a specific algorithm might gain little advantage from
+supporting arbitrary indices, writing code that is &ldquo;indices aware&rdquo;
+from the beginning is often no harder than writing algorithms that
+implicitly assume indexing starts at 1.</p>
+</li>
+</ul>
+<p>Developers are referred to
+<a href="https://docs.julialang.org/en/v1/devdocs/offset-arrays">Julia's documentation</a>
+for further guidance.</p>
+
+
+  </div>
+
+  
+
+  </div>
+  </div>
+  </div>
+
+  <br />
+
+  
+
+
+  <head>
+  <meta name="description" content="We thank our contributors, donators, and Fastly for their support in keeping the Julia Language going. Donate here to help pay for Julia's needs."/>
+</head>
+
+<footer class="container-fluid footer-copy">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 py-2">
+          <p>
+            We thank <a style="color: #7a95dd" href="https://www.fastly.com">Fastly</a> for their generous infrastructure support. Donations help pay for community resources such as CI, Discourse, workshops, travel, JuliaCon, and other such needs.
+          </p>
+          <p>
+            ©2019 JuliaLang.org contributors. The website content uses the <a style="color: #7a95dd" href="https://github.com/JuliaLang/www.julialang.org/blob/master/LICENSE.md">MIT license</a>.
+          </p>
+        </div>
+        <div class="col-md-2 py-2">
+          <a class="btn btn-success" href="https://numfocus.org/donate-to-julia">Donate</a>
+        </div>
+      </div>
+    </div>
+</footer>
+
+
+  <script src="/v2/js/jquery.min.js"></script>
+<script src="/v2/js/bootstrap.min.js"></script>
+<script src="/v2/js/platform.js"></script>
+<script src="/v2/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+</body>
+
+</html>

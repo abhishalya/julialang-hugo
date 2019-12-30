@@ -1,0 +1,1108 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/</loc>
+    <lastmod>2019-12-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/</loc>
+    <lastmod>2019-12-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2019-12-28-yao-differentiable-quantum-programming/</loc>
+    <lastmod>2019-12-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2019-12-18-artifacts-zh_cn/</loc>
+    <lastmod>2019-12-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2019-11-19-artifacts/</loc>
+    <lastmod>2019-11-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2019-11-15-google-code-in/</loc>
+    <lastmod>2019-11-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2019-09-16-profilers/</loc>
+    <lastmod>2019-09-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2019-09-07-julia-workshop-beijing/</loc>
+    <lastmod>2019-09-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2019-09-07-julia-workshop-beijing-zh_cn/</loc>
+    <lastmod>2019-09-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2019-09-07-release-process-zh-cn/</loc>
+    <lastmod>2019-09-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2019-08-28-release-process/</loc>
+    <lastmod>2019-08-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2019-08-06-2019-julia-survey/</loc>
+    <lastmod>2019-08-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2019-07-30-multithreading-zh-cn/</loc>
+    <lastmod>2019-07-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2019-07-23-multithreading/</loc>
+    <lastmod>2019-07-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2019-06-18-diffeqbot/</loc>
+    <lastmod>2019-06-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2019-05-31-jsoc19/</loc>
+    <lastmod>2019-05-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2019-05-02-beyond-ml-pipelines-with-mlj/</loc>
+    <lastmod>2019-05-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2019-04-04-fluxdiffeq-zh_tw/</loc>
+    <lastmod>2019-04-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2019-03-19-debuggers/</loc>
+    <lastmod>2019-03-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2019-02-12-julia-entities/</loc>
+    <lastmod>2019-02-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2019-02-03-light-graphs/</loc>
+    <lastmod>2019-02-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2019-01-18-fluxdiffeq/</loc>
+    <lastmod>2019-01-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2018-12-03-ml-language-compiler/</loc>
+    <lastmod>2018-12-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2018-09-12-pkgtutorial/</loc>
+    <lastmod>2018-09-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2018-09-11-juliacon2018/</loc>
+    <lastmod>2018-09-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2018-09-04-julia-community-prizes/</loc>
+    <lastmod>2018-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2018-08-14-gsoc2018-speech-recognition/</loc>
+    <lastmod>2018-08-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2018-08-13-adding-newer-features-and-speeding-up-convolutions-in-flux/</loc>
+    <lastmod>2018-08-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2018-08-09-union-splitting/</loc>
+    <lastmod>2018-08-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2018-08-08-one-point-zero/</loc>
+    <lastmod>2018-08-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2018-08-08-one-point-zero-zh_cn/</loc>
+    <lastmod>2018-08-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2018-08-08-one-point-zero-es/</loc>
+    <lastmod>2018-08-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2018-08-08-one-point-zero-zh_tw/</loc>
+    <lastmod>2018-08-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2018-08-06-gsoc-final-summary/</loc>
+    <lastmod>2018-08-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2018-07-08-iterators-in-julia-0.7/</loc>
+    <lastmod>2018-07-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2018-06-19-missing/</loc>
+    <lastmod>2018-06-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2018-05-11-extensible-broadcast-fusion/</loc>
+    <lastmod>2018-05-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2018-04-01-tetris-and-you/</loc>
+    <lastmod>2018-04-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2018-03-14-pifonts/</loc>
+    <lastmod>2018-03-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2018-02-21-gsoc2018-numfocus/</loc>
+    <lastmod>2018-02-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2017-12-25-mlpl-zh_tw/</loc>
+    <lastmod>2017-12-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2017-12-20-mlpl-cn/</loc>
+    <lastmod>2017-12-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2017-12-06-mlpl/</loc>
+    <lastmod>2017-12-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2017-11-01-gsoc-ode/</loc>
+    <lastmod>2017-11-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2017-10-13-gsoc-neuralnetdiffeq/</loc>
+    <lastmod>2017-10-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2017-10-05-command-interpolation-for-dummies/</loc>
+    <lastmod>2017-10-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2017-09-19-hamiltonian-indirect-inference/</loc>
+    <lastmod>2017-09-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2017-09-07-bio-parallel/</loc>
+    <lastmod>2017-09-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2017-09-06-gsoc-derivative_operators/</loc>
+    <lastmod>2017-09-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2017-09-03-gsoc-mcmc-with-flexible-numbers-of-parameters/</loc>
+    <lastmod>2017-09-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2017-09-01-gsoc-fenics/</loc>
+    <lastmod>2017-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2017-08-28-gsoc-docs-in-juno/</loc>
+    <lastmod>2017-08-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2017-08-23-native-julia-implementations-of-iterative-solvers-for-numerical-linear-algebra/</loc>
+    <lastmod>2017-08-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2017-08-15-juliacon/</loc>
+    <lastmod>2017-08-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2017-08-09-dsl/</loc>
+    <lastmod>2017-08-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2017-06-27-julia-0.6-release/</loc>
+    <lastmod>2017-06-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2017-05-03-raspberry-pi-julia/</loc>
+    <lastmod>2017-05-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2017-04-25-repl-0.6-highlights/</loc>
+    <lastmod>2017-04-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2017-04-18-offset-arrays/</loc>
+    <lastmod>2017-04-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2017-03-18-julia-fresh-paper/</loc>
+    <lastmod>2017-03-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2017-03-14-piday/</loc>
+    <lastmod>2017-03-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2017-03-14-cudanative/</loc>
+    <lastmod>2017-03-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2017-01-21-moredots/</loc>
+    <lastmod>2017-01-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2016-10-11-julia-0.5-highlights/</loc>
+    <lastmod>2016-10-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2016-10-10-julia-0.5-release/</loc>
+    <lastmod>2016-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2016-10-03-structuredqueries/</loc>
+    <lastmod>2016-10-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2016-09-21-juliacon2016/</loc>
+    <lastmod>2016-09-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2016-09-10-biojulia2016-mid/</loc>
+    <lastmod>2016-09-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2016-08-22-gsoc2016-graft/</loc>
+    <lastmod>2016-08-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2016-08-17-announcing-support-for-complex-domain-linear-programs-in-convex.jl/</loc>
+    <lastmod>2016-08-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2016-05-08-juliacon-invitation/</loc>
+    <lastmod>2016-05-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2016-04-30-biojulia2016/</loc>
+    <lastmod>2016-04-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2016-04-14-gsoc/</loc>
+    <lastmod>2016-04-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2016-03-27-arrays-iteration/</loc>
+    <lastmod>2016-03-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2016-03-01-parallelaccelerator/</loc>
+    <lastmod>2016-03-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2016-02-01-iteration/</loc>
+    <lastmod>2016-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2016-01-07-atom-work/</loc>
+    <lastmod>2016-01-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2015-10-25-datastreams/</loc>
+    <lastmod>2015-10-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2015-10-23-auto-diff-in-julia/</loc>
+    <lastmod>2015-10-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2015-10-22-glvisualize/</loc>
+    <lastmod>2015-10-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2015-10-21-biojulia-sequence-analysis/</loc>
+    <lastmod>2015-10-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2015-10-20-compose3d-threejs/</loc>
+    <lastmod>2015-10-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2015-10-16-nullablearrays/</loc>
+    <lastmod>2015-10-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2015-10-09-julia-0.4-release/</loc>
+    <lastmod>2015-10-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2015-05-30-juliacon-preview/</loc>
+    <lastmod>2015-05-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2015-05-23-jsoc-cfp/</loc>
+    <lastmod>2015-05-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2014-08-20-julia-0.3-release/</loc>
+    <lastmod>2014-08-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2014-08-09-juliacon-opening-session/</loc>
+    <lastmod>2014-08-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2014-08-09-juliacon-opt-session/</loc>
+    <lastmod>2014-08-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2013-09-04-fast-numeric/</loc>
+    <lastmod>2013-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2013-05-23-graphical-user-interfaces-part1/</loc>
+    <lastmod>2013-05-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2013-05-23-graphical-user-interfaces-part2/</loc>
+    <lastmod>2013-05-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2013-05-10-callback/</loc>
+    <lastmod>2013-05-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2013-04-08-put-this-in-your-pipe/</loc>
+    <lastmod>2013-04-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2013-04-05-distributed-numerical-optimization/</loc>
+    <lastmod>2013-04-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2013-03-30-julia-tutorial-mit/</loc>
+    <lastmod>2013-03-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2013-03-05-efficient-aggregates/</loc>
+    <lastmod>2013-03-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2012-08-16-design-and-implementation-of-julia/</loc>
+    <lastmod>2012-08-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2012-04-18-nyc-open-stats-meetup-announcement/</loc>
+    <lastmod>2012-04-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2012-03-24-lang-next-talk-announcement/</loc>
+    <lastmod>2012-03-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2012-03-11-shelling-out-sucks/</loc>
+    <lastmod>2012-03-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2012-03-01-stanford-talk-video/</loc>
+    <lastmod>2012-03-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2012-02-27-talk-announcement/</loc>
+    <lastmod>2012-02-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2012-02-14-why-we-created-julia/</loc>
+    <lastmod>2012-02-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/blog/2012-02-14-why-we-created-julia-zh_cn/</loc>
+    <lastmod>2012-02-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/license/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/manual/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/maw16/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/readme/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/soc/gsod/projects/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/utf8proc/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/utf8proc/doc/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/utf8proc/releases/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/bst19/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/asb16/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/b17/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/mc16/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/ot14/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/dtp16/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/jsb15/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/rn17/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/bmp17/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/lrof18/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/tspk14/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/soc/guidelines/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/rzrb16/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/abcfffklmrss18/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/abffkrss19/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/iabccfgkss19/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/bckse14/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/fs18/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/zaaf18/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/ms14/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/j19/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/bdfp2014/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/rpfnetal2018/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/mh15/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/gb19/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/kn18/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/jfc17/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/lfors17/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/soc/gsoc/compiler/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/cpw14/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/rsllbhgl16/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/rgkl17/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/gss14/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/ld13/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/umzhdb14/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/soc/gsoc/diffeq/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/rn217/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/dyff19/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/baablpp19/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/i18/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/r18/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/bfd2017/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/hz19/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/k14/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/isfgrjkss18/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/bzfpzwp14/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/tto14/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/js15/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/jsb15a/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/rsl17/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/soc/gsoc/general/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/uhzb14/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/h18/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/soc/gsoc/graphics/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/bvd2016/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/bt18/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/dv17/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/soc/gsoc/hpc/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/opv16/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/bomhfv15/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/ht14/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/community/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/community/standards/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/community/stewards/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/downloads/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/ecosystems/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/benchmarks/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/soc/ideas-page/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/zbpcbv2018/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/soc/ideas-page/archive/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/bkse12/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/beks17/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/bccksvz2018/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/tf2017/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/soc/gsoc/graphs/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/soc/gsoc/images/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/bffps19/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/dhl2017/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/pc18/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/learning/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/pk18/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/rb18/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/zh15/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/rn18/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/jfc17a/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/zanm17/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/ep16/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/clldnr17/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/pmg15/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/hbc/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/mr2017/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/fhhj17/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/sekbk13/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/soc/gsoc/numerics/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/so14/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/l13/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/pkmanr18/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/hlp14/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/pk16/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/ce14/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/alktvs17/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/v14/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/esbwgk17/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/r19/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/gfs17/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/bffvps18/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/bffps19b/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/dklp17/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/kbk19/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/hpoepp16/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/ont14/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/soc/gsoc/science/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/sog16/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/tddm14/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/r17/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/gbzwp16/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/fjf17/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/fbdsw13/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/soc/gsoc/kalmanbucy/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/hsbc17/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/ahk16/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/soc/gsoc/tables/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/tags/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/bs19/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/to14/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/project/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/oezl19/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/soc/gsoc/tooling/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/soc/gsoc/turing/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/bbcilsz16/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/teaching/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/lzww19/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/soc/gsoc/wasm/</loc>
+  </url>
+  
+  <url>
+    <loc>abhishalya.github.io/julialang-hugo/research/hn14/</loc>
+  </url>
+  
+</urlset>
