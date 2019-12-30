@@ -1,5 +1,5 @@
 ---
-layout: insidepage
+layout: single
 title:  Web Platform Projects – Summer of Code
 ---
 

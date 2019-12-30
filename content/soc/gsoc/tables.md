@@ -1,5 +1,5 @@
 ---
-layout: insidepage
+layout: single
 title:  Tabular Data – Summer of Code
 ---
 

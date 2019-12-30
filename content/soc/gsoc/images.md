@@ -1,5 +1,5 @@
 ---
-layout: insidepage
+layout: single
 title:  JuliaImages Projects – Summer of Code
 ---
 

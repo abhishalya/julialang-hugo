@@ -26,7 +26,7 @@
               </h3>
               <span class="article-date">{{ .Date.Format "02 January 2006" }}</span>
               <p>
-                {{ .Summary }}
+                {{ .Summary | truncate 80 }}
               </p>
             </div>
           {{ end }}

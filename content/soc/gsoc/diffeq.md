@@ -1,5 +1,5 @@
 ---
-layout: insidepage
+layout: single
 title:  DiffEq Projects – Summer of Code
 ---
 

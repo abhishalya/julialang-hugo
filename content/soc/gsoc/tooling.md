@@ -1,5 +1,5 @@
 ---
-layout: insidepage
+layout: single
 title:  Tooling Projects – Summer of Code
 ---
 

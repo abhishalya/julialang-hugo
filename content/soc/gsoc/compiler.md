@@ -1,5 +1,5 @@
 ---
-layout: insidepage
+layout: single
 title:  Compiler Projects – Summer of Code
 ---
 

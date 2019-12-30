@@ -1,5 +1,5 @@
 ---
-layout: insidepage
+layout: single
 title:  General Projects – Summer of Code
 ---
 

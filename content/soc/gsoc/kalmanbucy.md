@@ -1,5 +1,5 @@
 ---
-layout: insidepage
+layout: single
 title: Stochastic differential equations and continuous time signal processing – Summer of Code
 ---
 

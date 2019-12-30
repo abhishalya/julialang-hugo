@@ -1,5 +1,5 @@
 ---
-layout: insidepage
+layout: single
 title:  JuliaGraphs – Summer of Code
 ---
 

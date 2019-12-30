@@ -1,4 +1,4 @@
-{{ $current_page := index (first 2 (split (delimit (split .URL "/") "," "") ",")) 1 }}
+{{ $current_page := index (first 2 (split (delimit (split .RelPermalink "/") "," "") ",")) 1 }}
 <!-- main menu -->
 <div class="container py-3 py-lg-0">
   <nav class="navbar navbar-expand-lg navbar-light bg-light" id="main-menu">

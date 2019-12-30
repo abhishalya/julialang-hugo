@@ -20,14 +20,14 @@
   <br />
 
   <div class="row">
-    {{ range where . "Section" "blog" }}
+    {{ range first 3 (where . "Section" "blog") }}
       <div class="col-lg-4 col-md-12 blog">
         <h3>
           <a href="{{ .RelPermalink }}" class="title">{{ .Title }}</a>
         </h3>
         <span class="article-date">{{ .Date.Format "02 January 2006" }}</span>
         <p>
-          {{ .Summary }}
+          {{ .Summary | truncate 100 }}
         </p>
       </div>
     {{ end }}

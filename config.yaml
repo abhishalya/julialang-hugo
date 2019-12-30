@@ -1,2 +1,38 @@
 baseURL: "https://julialang.org"
 googleAnalytics: UA-28835595-1
+markup:
+  highlight:
+    codeFences: false
+    guessSyntax: false
+    hl_Lines: ""
+    lineNoStart: 1
+    lineNos: false
+    lineNumbersInTable: true
+    noClasses: true
+    style: monokai
+    tabWidth: 2
+navigation:
+  - title: home
+    url: /
+  - title: source
+    url: "https://github.com/JuliaLang/julia"
+  - url: "/downloads/"
+    title: downloads
+  - url: "https://docs.julialang.org/"
+    title: docs
+  - url: "/blog/"
+    title: blog
+  - url: "/community/"
+    title: community
+  - url: "/ecosystems"
+    title: ecosystems
+  - url: "/learning/"
+    title: learning
+  - url: "/teaching/"
+    title: teaching
+  - url: "/research/"
+    title: research
+  - url: "/soc/ideas-page.html"
+    title: GSoC
+  - url: "https://juliacon.org"
+    title: juliacon

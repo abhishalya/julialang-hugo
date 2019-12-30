@@ -1,5 +1,5 @@
 ---
-layout: insidepage
+layout: single
 title:  Turing Projects – Summer of Code
 ---
 

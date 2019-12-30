@@ -1,5 +1,5 @@
 ---
-layout: insidepage
+layout: single
 title:  Scientific Projects – Summer of Code
 ---
 

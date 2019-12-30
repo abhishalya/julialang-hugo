@@ -1,5 +1,5 @@
 ---
-layout: insidepage
+layout: single
 title:  HPC Projects – Summer of Code
 ---
 
